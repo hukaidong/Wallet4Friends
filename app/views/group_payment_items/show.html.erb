@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @group_payment_item.status %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @group_payment_item.amount %>
+</p>
+
+<%= link_to 'Edit', edit_group_payment_item_path(@group_payment_item) %> |
+<%= link_to 'Back', group_payment_items_path %>

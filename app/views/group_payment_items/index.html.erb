@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Group Payment Items</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Status</th>
+    <th>Amount</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @group_payment_items.each do |group_payment_item| %>
+    <tr>
+      <td><%= group_payment_item.status %></td>
+      <td><%= group_payment_item.amount %></td>
+      <td><%= link_to 'Show', group_payment_item %></td>
+      <td><%= link_to 'Edit', edit_group_payment_item_path(group_payment_item) %></td>
+      <td><%= link_to 'Destroy', group_payment_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Group Payment Item', new_group_payment_item_path %>

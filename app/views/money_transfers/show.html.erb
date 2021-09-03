@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Memo:</strong>
+  <%= @money_transfer.memo %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @money_transfer.amount %>
+</p>
+
+<%= link_to 'Edit', edit_money_transfer_path(@money_transfer) %> |
+<%= link_to 'Back', money_transfers_path %>

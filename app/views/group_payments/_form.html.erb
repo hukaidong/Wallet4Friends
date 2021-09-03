@@ -1,0 +1,22 @@
+<%= form_with(model: group_payment) do |form| %>
+  <% if group_payment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(group_payment.errors.count, "error") %> prohibited this group_payment from being saved:</h2>
+
+      <ul>
+        <% group_payment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :memo %>
+    <%= form.text_field :memo %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
