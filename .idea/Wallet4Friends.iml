@@ -96,6 +96,7 @@
     <orderEntry type="library" scope="PROVIDED" name="web-console (v4.1.0, ruby-3.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="webdrivers (v4.6.1, ruby-3.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="webpacker (v5.4.2, ruby-3.0.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="webpacker-routes (v0.1.4, ruby-3.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-driver (v0.7.5, ruby-3.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-extensions (v0.1.5, ruby-3.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="xpath (v3.2.0, ruby-3.0.0-p0) [gem]" level="application" />
@@ -430,10 +431,17 @@
                   <RakeTaskImpl description="Install everything needed for Elm" fullCommand="webpacker:install:elm" id="elm" />
                   <RakeTaskImpl description="Install everything needed for Erb" fullCommand="webpacker:install:erb" id="erb" />
                   <RakeTaskImpl description="Install everything needed for React" fullCommand="webpacker:install:react" id="react" />
+                  <RakeTaskImpl description="Install everything needed for routes" fullCommand="webpacker:install:routes" id="routes" />
                   <RakeTaskImpl description="Install everything needed for Stimulus" fullCommand="webpacker:install:stimulus" id="stimulus" />
                   <RakeTaskImpl description="Install everything needed for Svelte" fullCommand="webpacker:install:svelte" id="svelte" />
                   <RakeTaskImpl description="Install everything needed for Typescript" fullCommand="webpacker:install:typescript" id="typescript" />
                   <RakeTaskImpl description="Install everything needed for Vue" fullCommand="webpacker:install:vue" id="vue" />
+                </subtasks>
+              </RakeTaskImpl>
+              <RakeTaskImpl id="routes">
+                <subtasks>
+                  <RakeTaskImpl description="Generate routes package" fullCommand="webpacker:routes:generate" id="generate" />
+                  <RakeTaskImpl description="Verifies if routes is installed" fullCommand="webpacker:routes:verify_install" id="verify_install" />
                 </subtasks>
               </RakeTaskImpl>
               <RakeTaskImpl description="Verifies if Webpacker is installed" fullCommand="webpacker:verify_install" id="verify_install" />
